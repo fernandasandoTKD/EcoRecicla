@@ -19,14 +19,23 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Section of redirect Home
-        login =findViewById(R.id.btnLogin);
+        // Section of redirect  to other page
+        login =findViewById(R.id.btnRegister);
+        register=findViewById(R.id.txtRegister);
         Intent home= new Intent(this, HomeActivity.class);
+        Intent registerSection= new Intent(this, RegisterActivity.class);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(home);
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v ) {
+                startActivity(registerSection);
             }
         });
 
