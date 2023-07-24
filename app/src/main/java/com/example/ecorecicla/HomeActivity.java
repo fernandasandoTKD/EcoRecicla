@@ -27,6 +27,7 @@ public class HomeActivity extends AppCompatActivity {
 
         Intent  sectionStadistics=new Intent(this, EstadistcsActivity.class);
         Intent  sectionTips= new Intent (this, RecommendationActivity.class);
+        Intent  sectionCategories= new Intent (this, MaterialActivity.class);
 
         //Section of events
         stadistics.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +48,21 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(sectionTips);
+            }
+        });
+
+        category.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(sectionCategories);
+            }
+        });
+
+
+        imgCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(sectionCategories);
             }
         });
 
