@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#E9F29B"
+    android:background="#E9F29B"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".HomeActivity">
@@ -34,7 +34,7 @@
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:background="#e9f29b"
+        android:background="#88EF50"
         android:orientation="horizontal">
 
         <Button
@@ -42,7 +42,7 @@
             android:layout_width="218dp"
             android:layout_height="114dp"
             android:layout_weight="1"
-            android:backgroundTint="#e9f29b"
+            android:backgroundTint="#FF8FDF64"
             android:backgroundTintMode="src_over"
             android:fontFamily="@font/averia_gruesa_libre"
             android:text="Estadísticas"
@@ -55,6 +55,7 @@
             android:layout_width="153dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="#FF8FDF64"
             app:srcCompat="@drawable/_233864_4085216" />
     </LinearLayout>
 
@@ -115,39 +116,47 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:layout_marginTop="50dp"
-        android:background="#1B5E20"
-        android:gravity="center"
+        android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/ivHome"
-            android:layout_width="36dp"
-            android:layout_height="49dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/house_white_24dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:background="#1B5E20"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/idProfile"
-            android:layout_width="116dp"
-            android:layout_height="56dp"
-            android:backgroundTint="#A8C6FA"
-            app:srcCompat="@drawable/face_white_24dp" />
+            <ImageView
+                android:id="@+id/ivHome"
+                android:layout_width="36dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/house_white_24dp" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="43dp"
-            android:layout_height="49dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/search_white_24dp" />
+            <ImageView
+                android:id="@+id/idProfile"
+                android:layout_width="116dp"
+                android:layout_height="56dp"
+                android:backgroundTint="#A8C6FA"
+                app:srcCompat="@drawable/face_white_24dp" />
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="49dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/build_white_24dp" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="43dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/search_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/build_white_24dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9CE2EE79"
+    android:background="#E9F29B"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".LoginActivity">
@@ -47,7 +47,8 @@
         android:ems="10"
         android:gravity="center"
         android:hint="Correo-usuario-celular"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textColorHint="@color/material_dynamic_neutral60" />
 
     <TextView
         android:id="@+id/textView5"
@@ -67,7 +68,8 @@
         android:gravity="center"
         android:hint="Ingresa tu contraseña"
         android:inputType="textPassword"
-        android:textColor="#1B5E20" />
+        android:textColor="#1B5E20"
+        android:textColorHint="@color/material_dynamic_neutral60" />
 
     <TextView
         android:id="@+id/textView7"
@@ -84,7 +86,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:backgroundTint="#1B5E20"
-        android:text="INGRESAR" />
+        android:text="INGRESAR"
+        android:textColor="@color/white"
+        android:textColorLink="@color/white" />
 
     <TextView
         android:id="@+id/txtRegister"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9CE2EE79"
+    android:background="#E9F29B"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".MaterialActivity">
@@ -47,6 +47,8 @@
             android:layout_weight="1"
             android:backgroundTint="#a8c6fa"
             android:text="PAPEL"
+            android:textColorHint="@color/design_default_color_background"
+            android:textColorLink="@color/white"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -66,7 +68,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#8BC34A"
-            android:text="PLÁSTICO" />
+            android:text="PLÁSTICO"
+            android:textColorHint="@color/design_default_color_background"
+            android:textColorLink="@color/white"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <Space
@@ -84,7 +89,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#4CAF50"
-            android:text="CARTÓN" />
+            android:text="CARTÓN"
+            android:textColorHint="@color/design_default_color_background"
+            android:textColorLink="@color/white"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <Space
@@ -101,8 +109,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#87DF0A"
-            android:text="ALUMINIO" />
+            android:backgroundTint="#E6C652"
+            android:text="ALUMINIO"
+            android:textColorHint="@color/design_default_color_background"
+            android:textColorLink="@color/white"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <Space

@@ -1,9 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/t"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E9F29B"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".PlasticActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="#1B5E20" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/reciclaje" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/akronim"
+        android:gravity="center_horizontal"
+        android:text="EcoRecicla"
+        android:textColor="#1B5E20"
+        android:textSize="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:text="Plástico"
+            android:textAlignment="center"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cantidad promedio:" />
+
+        <EditText
+            android:id="@+id/txtprom"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="cantidad"
+            android:inputType="text"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cantidad mínima:" />
+
+        <EditText
+            android:id="@+id/txtMin"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="cantidad"
+            android:inputType="text"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cantidad máxima:" />
+
+        <EditText
+            android:id="@+id/txtMax"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="cantidad"
+            android:inputType="text"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="35dp" />
+
+    <Button
+        android:id="@+id/btnRegisterPlas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8BC34A"
+        android:text="REGISTRO DE CONSUMO"
+        android:textSize="20dp"
+        app:cornerRadius="2dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:background="#1B5E20"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivHome"
+                android:layout_width="36dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/house_white_24dp" />
+
+            <ImageView
+                android:id="@+id/idProfile"
+                android:layout_width="116dp"
+                android:layout_height="56dp"
+                android:backgroundTint="#A8C6FA"
+                app:srcCompat="@drawable/face_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="43dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/search_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/build_white_24dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
