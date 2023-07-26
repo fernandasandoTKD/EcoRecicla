@@ -2,6 +2,7 @@ package com.example.ecorecicla;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,9 +20,10 @@ import java.io.FileWriter;
 public class PlasticActivity extends AppCompatActivity {
 
     ImageView home;
-    EditText max, min, pro;
+    EditText max, min, pro, month;
     Button registerPlastic;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,7 @@ public class PlasticActivity extends AppCompatActivity {
         max=findViewById(R.id.txtMax);
         min=findViewById(R.id.txtMin);
         pro=findViewById(R.id.txtprom);
+        month=findViewById(R.id.txtMes);
         registerPlastic=findViewById(R.id.btnRegisterPlas);
 
         Intent homeSection= new Intent (this, HomeActivity.class);
@@ -46,7 +49,10 @@ public class PlasticActivity extends AppCompatActivity {
                 //Verificación de campos
                 if(! max.getText().toString().isEmpty() &&
                     !min.getText().toString().isEmpty() &&
-                    !pro.getText().toString().isEmpty()){
+                    !pro.getText().toString().isEmpty() && !month.getText().toString().isEmpty()){
+
+
+
 
                     //Almacenamiento en TXT y definición de archivo
 
@@ -56,9 +62,10 @@ public class PlasticActivity extends AppCompatActivity {
 
                         //BufferedWriter, nos permite guardar y capturar a consumo
                         BufferedWriter bufferedWriter= new BufferedWriter(writer);
-                        String consumo=max.getText().toString()+","+
+                        String consumo= max.getText().toString()+","+
                                         min.getText().toString()+","+
-                                        pro.getText().toString()+",";
+                                        pro.getText().toString()+","+
+                                        month.getText().toString()+",";
                         bufferedWriter.write(consumo);
                         bufferedWriter.newLine();
                         bufferedWriter.close();
@@ -70,6 +77,7 @@ public class PlasticActivity extends AppCompatActivity {
                     max.setText("");
                     min.setText("");
                     pro.setText("");
+                    month.setText("");
 
 
                 }else{
