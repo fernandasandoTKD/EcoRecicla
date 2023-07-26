@@ -60,15 +60,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cantidad promedio:" />
+            android:text="Cantidad:" />
 
         <EditText
-            android:id="@+id/txtprom"
-            android:layout_width="90dp"
+            android:id="@+id/txtKg"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="cantidad"
+            android:hint="KG"
             android:inputType="text"
             android:textSize="16dp" />
     </LinearLayout>
@@ -83,15 +83,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cantidad mínima:" />
+            android:text="Valor ganado:" />
 
         <EditText
-            android:id="@+id/txtMin"
+            android:id="@+id/txtPrice"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="cantidad"
+            android:hint="$$$$"
             android:inputType="text"
             android:textSize="16dp" />
     </LinearLayout>
@@ -99,25 +99,7 @@
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Cantidad máxima:" />
-
-        <EditText
-            android:id="@+id/txtMax"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="cantidad"
-            android:inputType="text"
-            android:textSize="16dp" />
-    </LinearLayout>
+        android:orientation="horizontal"/>
 
     <LinearLayout
         android:layout_width="340dp"
@@ -129,16 +111,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Mes"
+            android:text="Mes:"
             tools:ignore="DuplicateIds" />
 
         <EditText
             android:id="@+id/txtMes"
-            android:layout_width="10dp"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="cantidad"
+            android:hint="Periodo"
             android:inputType="text"
             android:textSize="16dp" />
 

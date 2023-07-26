@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#8BC34A"
-                    android:text="Promedio"
+                    android:text="Mes"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
 
@@ -90,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#8BC34A"
-                    android:text="Máximo reciclado"
+                    android:text="Material"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
 
@@ -100,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#8BC34A"
-                    android:text="Mínimo reciclado"
+                    android:text="Cantidad"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
 
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#8BC34A"
-                    android:text="Mes"
+                    android:text="Ganancia"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
 

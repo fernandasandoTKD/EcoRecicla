@@ -12,6 +12,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.io.File;
+
 public class EstadistcsActivity extends AppCompatActivity {
 
      ImageView home;
@@ -25,7 +27,9 @@ public class EstadistcsActivity extends AppCompatActivity {
         table=findViewById(R.id.tableEstadistic);
 
         Intent homeSection= new Intent(this, HomeActivity.class);
-        
+
+        //Cargar datos a los txt (File)
+        File recyclingFile= new File(getFilesDir(), "plastic.text");
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,23 +39,23 @@ public class EstadistcsActivity extends AppCompatActivity {
         });
     }
 
+
     //función para añadir campos a un tabla.
 
-    public void addElementData(String month, String min, String max, String pro){
+    public void addElementData(String month, String price, String kg){
         TableRow  row = new TableRow(this);
         TextView  cell1= new TextView(this);
-        cell1.setText(pro);
+        cell1.setText(kg);
         TextView cell2= new TextView(this);
-        cell2.setText(max);
+        cell2.setText(price);
         TextView cell3 = new TextView(this);
-        cell3.setText(min);
-        TextView cell4 = new TextView(this);
-        cell4.setText(month);
+        cell3.setText(month);
+
 
         row.addView(cell1);
         row.addView(cell2);
         row.addView(cell3);
-        row.addView(cell4);
+
 
         table.addView(row);
     }

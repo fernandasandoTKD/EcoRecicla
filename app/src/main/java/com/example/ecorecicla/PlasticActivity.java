@@ -20,7 +20,7 @@ import java.io.FileWriter;
 public class PlasticActivity extends AppCompatActivity {
 
     ImageView home;
-    EditText max, min, pro, month;
+    EditText price, kg, month;
     Button registerPlastic;
 
     @SuppressLint("MissingInflatedId")
@@ -29,9 +29,8 @@ public class PlasticActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plastic);
         home=findViewById(R.id.ivHome);
-        max=findViewById(R.id.txtMax);
-        min=findViewById(R.id.txtMin);
-        pro=findViewById(R.id.txtprom);
+        price=findViewById(R.id.txtPrice);
+        kg=findViewById(R.id.txtKg);
         month=findViewById(R.id.txtMes);
         registerPlastic=findViewById(R.id.btnRegisterPlas);
 
@@ -47,9 +46,8 @@ public class PlasticActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Verificación de campos
-                if(! max.getText().toString().isEmpty() &&
-                    !min.getText().toString().isEmpty() &&
-                    !pro.getText().toString().isEmpty() && !month.getText().toString().isEmpty()){
+                if(!price.getText().toString().isEmpty() &&
+                    !kg.getText().toString().isEmpty() && !month.getText().toString().isEmpty()){
 
 
 
@@ -62,9 +60,8 @@ public class PlasticActivity extends AppCompatActivity {
 
                         //BufferedWriter, nos permite guardar y capturar a consumo
                         BufferedWriter bufferedWriter= new BufferedWriter(writer);
-                        String consumo= max.getText().toString()+","+
-                                        min.getText().toString()+","+
-                                        pro.getText().toString()+","+
+                        String consumo= price.getText().toString()+","+
+                                        kg.getText().toString()+","+
                                         month.getText().toString()+",";
                         bufferedWriter.write(consumo);
                         bufferedWriter.newLine();
@@ -74,9 +71,8 @@ public class PlasticActivity extends AppCompatActivity {
                     }
 
                     //Reinicio de los TXT
-                    max.setText("");
-                    min.setText("");
-                    pro.setText("");
+                    price.setText("");
+                    kg.setText("");
                     month.setText("");
 
 
