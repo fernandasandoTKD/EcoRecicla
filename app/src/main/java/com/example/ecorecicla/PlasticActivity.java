@@ -2,7 +2,6 @@ package com.example.ecorecicla;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +22,7 @@ public class PlasticActivity extends AppCompatActivity {
     EditText price, kg, month;
     Button registerPlastic;
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +31,7 @@ public class PlasticActivity extends AppCompatActivity {
         price=findViewById(R.id.txtPrice);
         kg=findViewById(R.id.txtKg);
         month=findViewById(R.id.txtMes);
-        registerPlastic=findViewById(R.id.btnRegisterPlas);
+        registerPlastic=findViewById(R.id.btnRegisterPaper);
 
         Intent homeSection= new Intent (this, HomeActivity.class);
         home.setOnClickListener(new View.OnClickListener() {

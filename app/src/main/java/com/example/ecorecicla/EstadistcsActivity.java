@@ -10,6 +10,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.example.ecorecicla.modelos.Paper;
 import com.example.ecorecicla.modelos.Plastic;
 
 import java.io.BufferedReader;
@@ -34,11 +35,16 @@ public class EstadistcsActivity extends AppCompatActivity {
 
         //Cargar datos a los txt (File)
         File recyclingFile= new File(getFilesDir(), "plastic.txt");
+        File paperFile= new File(getFilesDir(), "paper.txt");
 
         //Llamado de funciones
 
         List<Plastic> plasticList = readFile(recyclingFile);
         addElementData(plasticList);
+        List<Paper> paperList= readFilePaper(paperFile);
+        addPaperData(paperList);
+
+
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,4 +122,70 @@ public class EstadistcsActivity extends AppCompatActivity {
         }
 
     }
+
+
+    //Section paper list
+
+    public static List <Paper> readFilePaper(File file){
+        List <Paper> paperList= new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(file))){
+            String line;
+            while((line= br.readLine())!=null){
+                String[] data= line.split(",");
+                float kg =Float.parseFloat(data[0]);
+                float price=Float.parseFloat(data[1]);
+                String month=data[2];
+                Paper paperObj= new Paper(kg,price,month);
+                paperList.add(paperObj);
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return paperList;
+    }
+
+    public void addPaperData(List <Paper> paperList){
+
+        //Sección de iteración
+
+        for (Paper i:paperList){
+            TableRow  row = new TableRow(this);
+
+            TextView cell1= new TextView(this);
+            cell1.setText(i.getMonth());
+            cell1.setWidth(80);
+            cell1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell1.setBackgroundResource(R.color.white);
+            TextView cell2= new TextView(this);
+            cell2.setText("Papel");
+            cell2.setWidth(90);
+            cell2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell2.setBackgroundResource(R.color.white);
+            TextView cell3= new TextView(this);
+            cell3.setText(String.valueOf(i.getKg()));
+            cell3.setWidth(90);
+            cell3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell3.setBackgroundResource(R.color.white);
+            TextView cell4= new TextView(this);
+            cell4.setText(String.valueOf(i.getPrice()));
+            cell4.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell4.setWidth(70);
+            cell4.setBackgroundResource(R.color.white);
+
+
+            row.addView(cell1);
+            row.addView(cell2);
+            row.addView(cell3);
+            row.addView(cell4);
+
+
+            table.addView(row);
+        }
+
+    }
+
+
+
+
 }

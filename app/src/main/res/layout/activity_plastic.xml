@@ -132,7 +132,7 @@
         android:layout_height="35dp" />
 
     <Button
-        android:id="@+id/btnRegisterPlas"
+        android:id="@+id/btnRegisterPaper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#8BC34A"
