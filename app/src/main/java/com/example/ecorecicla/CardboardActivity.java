@@ -14,20 +14,21 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
-public class PaperActivity extends AppCompatActivity {
+public class CardboardActivity extends AppCompatActivity {
+
     ImageView home;
     EditText price, kg, month;
-    Button registerPaper;
+    Button registerCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paper);
+        setContentView(R.layout.activity_cardboard);
         home=findViewById(R.id.ivHome);
         price=findViewById(R.id.txtPrice);
         kg=findViewById(R.id.txtKg);
         month=findViewById(R.id.txtMes);
-        registerPaper=findViewById(R.id.btnRegister);
+        registerCard=findViewById(R.id.btnRegister);
 
         Intent homeSection= new Intent (this, HomeActivity.class);
 
@@ -38,8 +39,7 @@ public class PaperActivity extends AppCompatActivity {
             }
         });
 
-
-        registerPaper.setOnClickListener(new View.OnClickListener() {
+        registerCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Verificación de campos
@@ -48,7 +48,7 @@ public class PaperActivity extends AppCompatActivity {
 
                     //Almacenamiento en TXT y definición de archivo
 
-                    File file= new File(getFilesDir(),"paper.txt");
+                    File file= new File(getFilesDir(),"card.txt");
                     try {
                         FileWriter writer = new FileWriter(file, true);
 
@@ -72,7 +72,7 @@ public class PaperActivity extends AppCompatActivity {
 
                 }else{
                     //Mensajes de alerta
-                    Toast.makeText(PaperActivity.this,"Todos los campos deben ser diligenciados", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CardboardActivity.this,"Todos los campos deben ser diligenciados", Toast.LENGTH_LONG).show();
 
                 }
 

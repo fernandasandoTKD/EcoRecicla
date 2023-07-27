@@ -10,6 +10,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.example.ecorecicla.modelos.Cardboard;
 import com.example.ecorecicla.modelos.Paper;
 import com.example.ecorecicla.modelos.Plastic;
 
@@ -36,6 +37,7 @@ public class EstadistcsActivity extends AppCompatActivity {
         //Cargar datos a los txt (File)
         File recyclingFile= new File(getFilesDir(), "plastic.txt");
         File paperFile= new File(getFilesDir(), "paper.txt");
+        File cardFile= new File(getFilesDir(),"card.txt");
 
         //Llamado de funciones
 
@@ -43,6 +45,8 @@ public class EstadistcsActivity extends AppCompatActivity {
         addElementData(plasticList);
         List<Paper> paperList= readFilePaper(paperFile);
         addPaperData(paperList);
+        List <Cardboard> cardList=readFileCard(cardFile);
+        addCardData(cardList);
 
 
 
@@ -145,9 +149,68 @@ public class EstadistcsActivity extends AppCompatActivity {
         return paperList;
     }
 
+    public void addCardData(List <Cardboard> cardboardList){
+
+
+        for (Cardboard i:cardboardList){
+            TableRow  row = new TableRow(this);
+
+            TextView cell1= new TextView(this);
+            cell1.setText(i.getMonth());
+            cell1.setWidth(80);
+            cell1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell1.setBackgroundResource(R.color.white);
+            TextView cell2= new TextView(this);
+            cell2.setText("Cartón");
+            cell2.setWidth(90);
+            cell2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell2.setBackgroundResource(R.color.white);
+            TextView cell3= new TextView(this);
+            cell3.setText(String.valueOf(i.getKg()));
+            cell3.setWidth(90);
+            cell3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell3.setBackgroundResource(R.color.white);
+            TextView cell4= new TextView(this);
+            cell4.setText(String.valueOf(i.getPrice()));
+            cell4.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell4.setWidth(70);
+            cell4.setBackgroundResource(R.color.white);
+
+
+            row.addView(cell1);
+            row.addView(cell2);
+            row.addView(cell3);
+            row.addView(cell4);
+
+
+            table.addView(row);
+        }
+
+    }
+
+    // Section Cardborad
+
+    public static List <Cardboard> readFileCard (File file){
+        List <Cardboard> cardboardList = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(file))){
+            String line;
+            while ((line= br.readLine()) != null){
+                String[] data= line.split(",");
+                float volume= Float.parseFloat(data[0]);
+                float price= Float.parseFloat(data[1]);
+                String month= data[2];
+                Cardboard cardObj= new Cardboard(volume,price,month);
+                cardboardList.add(cardObj);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return cardboardList;
+
+    }
+
     public void addPaperData(List <Paper> paperList){
 
-        //Sección de iteración
 
         for (Paper i:paperList){
             TableRow  row = new TableRow(this);
@@ -184,8 +247,6 @@ public class EstadistcsActivity extends AppCompatActivity {
         }
 
     }
-
-
 
 
 }

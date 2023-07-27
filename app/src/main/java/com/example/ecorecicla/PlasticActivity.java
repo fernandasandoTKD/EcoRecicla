@@ -31,7 +31,7 @@ public class PlasticActivity extends AppCompatActivity {
         price=findViewById(R.id.txtPrice);
         kg=findViewById(R.id.txtKg);
         month=findViewById(R.id.txtMes);
-        registerPlastic=findViewById(R.id.btnRegisterPaper);
+        registerPlastic=findViewById(R.id.btnRegister);
 
         Intent homeSection= new Intent (this, HomeActivity.class);
         home.setOnClickListener(new View.OnClickListener() {

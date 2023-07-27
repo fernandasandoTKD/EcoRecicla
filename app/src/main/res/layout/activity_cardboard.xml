@@ -2,13 +2,12 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/t"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E9F29B"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".PlasticActivity">
+    tools:context=".CardboardActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/averia_gruesa_libre"
-            android:text="Plástico"
+            android:text="Cartón"
             android:textAlignment="center"
             android:textSize="35dp" />
     </LinearLayout>
@@ -185,6 +184,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 </androidx.appcompat.widget.LinearLayoutCompat>

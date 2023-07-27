@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class MaterialActivity extends AppCompatActivity {
 
-    Button plastic, paper;
+    Button plastic, paper, cardborad;
     ImageView home;
 
     @Override
@@ -19,10 +19,12 @@ public class MaterialActivity extends AppCompatActivity {
         setContentView(R.layout.activity_material);
         plastic=findViewById(R.id.btnPlastico);
         paper=findViewById(R.id.btnPapel);
+        cardborad=findViewById(R.id.btnCarton);
         home=findViewById(R.id.ivHome);
 
         Intent sectionPlastic =new Intent(this, PlasticActivity.class);
         Intent sectionPaper =new Intent(this, PaperActivity.class);
+        Intent sectionCardborad= new Intent(this, CardboardActivity.class);
         Intent homeSection= new Intent (this, HomeActivity.class);
 
         plastic.setOnClickListener(new View.OnClickListener() {
@@ -38,12 +40,20 @@ public class MaterialActivity extends AppCompatActivity {
                 startActivity(sectionPaper);
             }
         }));
+        cardborad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(sectionCardborad);
+            }
+        });
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(homeSection);
             }
         });
+
+
 
     }
 }
