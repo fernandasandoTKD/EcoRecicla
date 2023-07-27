@@ -49,9 +49,6 @@ public class PlasticActivity extends AppCompatActivity {
                 if(!price.getText().toString().isEmpty() &&
                     !kg.getText().toString().isEmpty() && !month.getText().toString().isEmpty()){
 
-
-
-
                     //Almacenamiento en TXT y definición de archivo
 
                     File file= new File(getFilesDir(),"plastic.txt");
