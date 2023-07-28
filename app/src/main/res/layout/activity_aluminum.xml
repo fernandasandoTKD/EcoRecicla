@@ -7,7 +7,7 @@
     android:background="#E9F29B"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".MaterialActivity">
+    tools:context=".AluminumActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,6 +21,7 @@
         android:layout_marginTop="10dp"
         app:srcCompat="@drawable/reciclaje" />
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -31,94 +32,112 @@
         android:textColor="#1B5E20"
         android:textSize="50dp" />
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="40dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:text="Aluminio"
+            android:textAlignment="center"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cantidad:" />
+
+        <EditText
+            android:id="@+id/txtKg"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="KG"
+            android:inputType="text"
+            android:textSize="16dp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnPapel"
+        <TextView
+            android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#a8c6fa"
-            android:text="PAPEL"
-            android:textColorHint="@color/design_default_color_background"
-            android:textColorLink="@color/white"
-            android:textSize="20sp" />
+            android:text="Valor ganado:" />
 
+        <EditText
+            android:id="@+id/txtPrice"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="$$$$"
+            android:inputType="text"
+            android:textSize="16dp" />
     </LinearLayout>
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="20dp" />
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
 
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnPlastico"
+        <TextView
+            android:id="@+id/textViewSection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="#8BC34A"
-            android:text="PLÁSTICO"
-            android:textColorHint="@color/design_default_color_background"
-            android:textColorLink="@color/white"
-            android:textSize="20sp" />
+            android:text="Mes:"
+            tools:ignore="DuplicateIds" />
+
+        <EditText
+            android:id="@+id/txtMes"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Periodo"
+            android:inputType="text"
+            android:textSize="16dp" />
+
+
     </LinearLayout>
 
     <Space
         android:layout_width="wrap_content"
-        android:layout_height="20dp" />
+        android:layout_height="35dp" />
 
-    <LinearLayout
-        android:layout_width="340dp"
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnCarton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#4CAF50"
-            android:text="CARTÓN"
-            android:textColorHint="@color/design_default_color_background"
-            android:textColorLink="@color/white"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="20dp" />
-
-    <LinearLayout
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnAluminio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#E6C652"
-            android:text="ALUMINIO"
-            android:textColorHint="@color/design_default_color_background"
-            android:textColorLink="@color/white"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="100dp" />
+        android:backgroundTint="#8BC34A"
+        android:text="REGISTRO DE CONSUMO"
+        android:textSize="20dp"
+        app:cornerRadius="2dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

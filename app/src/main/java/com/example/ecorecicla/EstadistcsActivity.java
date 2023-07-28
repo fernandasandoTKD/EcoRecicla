@@ -10,6 +10,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.example.ecorecicla.modelos.Aluminum;
 import com.example.ecorecicla.modelos.Cardboard;
 import com.example.ecorecicla.modelos.Paper;
 import com.example.ecorecicla.modelos.Plastic;
@@ -38,6 +39,7 @@ public class EstadistcsActivity extends AppCompatActivity {
         File recyclingFile= new File(getFilesDir(), "plastic.txt");
         File paperFile= new File(getFilesDir(), "paper.txt");
         File cardFile= new File(getFilesDir(),"card.txt");
+        File aluminumFile= new File (getFilesDir(), "aluminum.txt");
 
         //Llamado de funciones
 
@@ -47,6 +49,8 @@ public class EstadistcsActivity extends AppCompatActivity {
         addPaperData(paperList);
         List <Cardboard> cardList=readFileCard(cardFile);
         addCardData(cardList);
+        List <Aluminum> aluminumList=readFileAluminum(aluminumFile);
+        addAlumData(aluminumList);
 
 
 
@@ -222,6 +226,65 @@ public class EstadistcsActivity extends AppCompatActivity {
             cell1.setBackgroundResource(R.color.white);
             TextView cell2= new TextView(this);
             cell2.setText("Papel");
+            cell2.setWidth(90);
+            cell2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell2.setBackgroundResource(R.color.white);
+            TextView cell3= new TextView(this);
+            cell3.setText(String.valueOf(i.getKg()));
+            cell3.setWidth(90);
+            cell3.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell3.setBackgroundResource(R.color.white);
+            TextView cell4= new TextView(this);
+            cell4.setText(String.valueOf(i.getPrice()));
+            cell4.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell4.setWidth(70);
+            cell4.setBackgroundResource(R.color.white);
+
+
+            row.addView(cell1);
+            row.addView(cell2);
+            row.addView(cell3);
+            row.addView(cell4);
+
+
+            table.addView(row);
+        }
+
+    }
+
+    //Section aluminum
+
+    public static  List<Aluminum> readFileAluminum (File file){
+        List <Aluminum> aluminumList= new ArrayList<>();
+        try (BufferedReader br= new BufferedReader(new FileReader(file))){
+            String line;
+            while ((line= br.readLine()) != null){
+                String[] data= line.split(",");
+                float volume= Float.parseFloat(data[0]);
+                float price= Float.parseFloat(data[1]);
+                String month= data[2];
+                Aluminum waterObj= new Aluminum(volume,price,month);
+                aluminumList.add(waterObj);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return aluminumList;
+    }
+
+    public void addAlumData(List <Aluminum> aluminumList){
+
+
+        for (Aluminum i:aluminumList){
+            TableRow  row = new TableRow(this);
+
+            TextView cell1= new TextView(this);
+            cell1.setText(i.getMonth());
+            cell1.setWidth(80);
+            cell1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            cell1.setBackgroundResource(R.color.white);
+            TextView cell2= new TextView(this);
+            cell2.setText("Aluminio");
             cell2.setWidth(90);
             cell2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             cell2.setBackgroundResource(R.color.white);
