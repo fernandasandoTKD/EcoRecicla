@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9CE2EE79"
+    android:background="#E9F29B"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".EstadistcsActivity">
@@ -71,7 +71,7 @@
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="80dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#8BC34A"
@@ -101,7 +101,7 @@
 
             <TextView
                 android:id="@+id/textView17"
-                android:layout_width="60dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#8BC34A"
