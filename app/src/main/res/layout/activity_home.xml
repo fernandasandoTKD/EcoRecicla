@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E9F29B"
+    android:background="@drawable/_93aa2f85e1b8c8dcc8ded315396274a"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".HomeActivity">
@@ -34,20 +34,20 @@
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:background="#FF8FDF64"
+        android:background="@android:color/transparent"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnStadistic"
-            android:layout_width="218dp"
+            android:layout_width="241dp"
             android:layout_height="114dp"
             android:layout_weight="1"
-            android:backgroundTint="#FF8FDF64"
+            android:background="@android:color/transparent"
             android:backgroundTintMode="src_over"
             android:fontFamily="@font/averia_gruesa_libre"
             android:text="Estadísticas"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="30dp"
             app:cornerRadius="0dp" />
 
         <ImageView
@@ -55,27 +55,26 @@
             android:layout_width="153dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FF8FDF64"
             app:srcCompat="@drawable/_233864_4085216" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:background="#A8C6FA"
+        android:background="@android:color/transparent"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnCategories"
-            android:layout_width="218dp"
+            android:layout_width="243dp"
             android:layout_height="114dp"
             android:layout_weight="1"
-            android:backgroundTint="#a8c6fa"
+            android:background="@android:color/transparent"
             android:backgroundTintMode="src_over"
             android:fontFamily="@font/averia_gruesa_libre"
             android:text="Categorías"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="30dp"
             app:cornerRadius="0dp" />
 
         <ImageView
@@ -89,20 +88,20 @@
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:background="#fef8a0"
+        android:background="@android:color/transparent"
         android:backgroundTint="#fef8a0"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnTips"
-            android:layout_width="218dp"
+            android:layout_width="244dp"
             android:layout_height="114dp"
             android:layout_weight="1"
-            android:backgroundTint="#FEF8A0"
+            android:background="@android:color/transparent"
             android:fontFamily="@font/averia_gruesa_libre"
             android:text="Consejos"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="30dp"
             app:cornerRadius="0dp" />
 
         <ImageView

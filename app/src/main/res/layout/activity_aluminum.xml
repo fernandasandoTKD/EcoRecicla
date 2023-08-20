@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E9F29B"
+    android:background="@drawable/_93aa2f85e1b8c8dcc8ded315396274a"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".AluminumActivity">
@@ -57,11 +57,12 @@
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="wrap_content"
+            android:layout_width="72dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Cantidad:"
-            android:textColor="#F8000000" />
+            android:textColor="#F8000000"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/txtKg"
@@ -71,8 +72,8 @@
             android:ems="10"
             android:hint="KG"
             android:inputType="text"
-            android:textColor="#1B5E20"
-            android:textSize="16dp" />
+            android:textColorHint="@color/material_dynamic_neutral60"
+            android:textSize="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -82,11 +83,12 @@
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="wrap_content"
+            android:layout_width="103dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Valor ganado:"
-            android:textColor="#F8000000" />
+            android:textColor="#F8000000"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/txtPrice"
@@ -96,14 +98,13 @@
             android:ems="10"
             android:hint="$$$$"
             android:inputType="text"
-            android:textColor="#1B5E20"
-            android:textSize="16dp" />
+            android:textColorHint="@color/material_dynamic_neutral60"
+            android:textSize="20dp" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"/>
+        android:orientation="horizontal" />
 
     <LinearLayout
         android:layout_width="340dp"
@@ -117,6 +118,7 @@
             android:layout_weight="1"
             android:text="Mes:"
             android:textColor="#F8000000"
+            android:textSize="20dp"
             tools:ignore="DuplicateIds" />
 
         <EditText
@@ -127,8 +129,8 @@
             android:ems="10"
             android:hint="Periodo"
             android:inputType="text"
-            android:textColor="#1B5E20"
-            android:textSize="16dp" />
+            android:textColorHint="@color/material_dynamic_neutral60"
+            android:textSize="20dp" />
 
 
     </LinearLayout>
@@ -141,11 +143,12 @@
         android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#8BC34A"
         android:text="REGISTRO DE CONSUMO"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
-        app:cornerRadius="2dp" />
+        android:cornerRadius="2dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E9F29B"
+    android:background="@drawable/_93aa2f85e1b8c8dcc8ded315396274a"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".MaterialActivity">
@@ -47,7 +47,7 @@
             android:layout_weight="1"
             android:backgroundTint="#a8c6fa"
             android:text="PAPEL"
-            android:textColorHint="@color/design_default_color_background"
+            android:textColor="@color/white"
             android:textColorLink="@color/white"
             android:textSize="20sp" />
 
@@ -69,7 +69,7 @@
             android:layout_weight="1"
             android:backgroundTint="#8BC34A"
             android:text="PLÁSTICO"
-            android:textColorHint="@color/design_default_color_background"
+            android:textColor="@color/white"
             android:textColorLink="@color/white"
             android:textSize="20sp" />
     </LinearLayout>
@@ -90,7 +90,7 @@
             android:layout_weight="1"
             android:backgroundTint="#4CAF50"
             android:text="CARTÓN"
-            android:textColorHint="@color/design_default_color_background"
+            android:textColor="@color/white"
             android:textColorLink="@color/white"
             android:textSize="20sp" />
     </LinearLayout>
@@ -111,7 +111,7 @@
             android:layout_weight="1"
             android:backgroundTint="#E6C652"
             android:text="ALUMINIO"
-            android:textColorHint="@color/design_default_color_background"
+            android:textColor="@color/white"
             android:textColorLink="@color/white"
             android:textSize="20sp" />
     </LinearLayout>

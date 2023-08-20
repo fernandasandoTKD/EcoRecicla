@@ -5,7 +5,7 @@
     android:id="@+id/btn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9CE2EE79"
+    android:background="@drawable/_93aa2f85e1b8c8dcc8ded315396274a"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".RegisterActivity">
@@ -46,18 +46,17 @@
             android:fontFamily="@font/averia_gruesa_libre"
             android:text="Nombre"
             android:textColor="#000000"
-            android:textSize="14dp" />
+            android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/editTextName"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:gravity="center"
             android:hint="Nombres y apellidos"
             android:inputType="text"
-            android:textAlignment="textStart"
-            android:textSize="14dp" />
+            android:textColorHint="@color/material_dynamic_neutral60"
+            android:textSize="16dp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -67,19 +66,17 @@
             android:fontFamily="@font/averia_gruesa_libre"
             android:text="Correo eléctronico"
             android:textColor="#000000"
-            android:textSize="14dp" />
+            android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
-            android:layout_width="match_parent"
+            android:id="@+id/editTextEmail"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:gravity="center"
-            android:hint="E-mail"
-            android:inputType="textPassword"
-            android:textAlignment="textStart"
-            android:textColor="#1B5E20"
-            android:textSize="14dp" />
+            android:hint="Email"
+            android:inputType="text"
+            android:textColorHint="@color/material_dynamic_neutral60"
+            android:textSize="16dp" />
 
         <TextView
             android:id="@+id/textView9"
@@ -89,41 +86,17 @@
             android:fontFamily="@font/averia_gruesa_libre"
             android:text="Nombre de usuario"
             android:textColor="#000000"
-            android:textSize="14dp" />
+            android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword3"
-            android:layout_width="match_parent"
+            android:id="@+id/editTextUser"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:gravity="center"
             android:hint="Nombre de usuario"
-            android:inputType="textPassword"
-            android:textAlignment="textStart"
-            android:textColor="#1B5E20"
-            android:textSize="14dp" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/averia_gruesa_libre"
-            android:text="Teléfono móvil"
-            android:textColor="#000000"
-            android:textSize="14dp" />
-
-        <EditText
-            android:id="@+id/editTextTextPassword4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Teléfono móvil"
-            android:inputType="textPassword"
-            android:textAlignment="textStart"
-            android:textColor="#1B5E20"
-            android:textSize="14dp" />
+            android:inputType="text"
+            android:textColorHint="@color/material_dynamic_neutral60"
+            android:textSize="16dp" />
 
         <TextView
             android:id="@+id/textView12"
@@ -133,29 +106,29 @@
             android:fontFamily="@font/averia_gruesa_libre"
             android:text="Contraseña"
             android:textColor="#000000"
-            android:textSize="14dp" />
+            android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/editTextTextPassword6"
-            android:layout_width="237dp"
+            android:id="@+id/editTextPass"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:gravity="center"
-            android:hint="Contraseña"
-            android:inputType="textPassword"
-            android:textAlignment="textStart"
-            android:textColor="#1B5E20"
-            android:textSize="14dp" />
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#1B5E20"
-            android:text="REGISTRARSE" />
+            android:hint="Constraseña"
+            android:inputType="text"
+            android:textColorHint="@color/material_dynamic_neutral60"
+            android:textSize="16dp" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#1B5E20"
+        android:text="REGISTRARSE"
+        android:textColor="@color/white"
+        android:textColorLink="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
