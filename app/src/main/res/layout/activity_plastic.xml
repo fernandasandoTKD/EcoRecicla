@@ -146,9 +146,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:backgroundTint="#8BC34A"
-        android:text="REGISTRO DE CONSUMO"
-        android:textSize="20dp"
-        android:cornerRadius="2dp" />
+        android:text="REGISTRO DE CONSUMO" />
 
     <LinearLayout
         android:layout_width="match_parent"

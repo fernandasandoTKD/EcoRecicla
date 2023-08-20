@@ -147,8 +147,7 @@
         android:backgroundTint="#8BC34A"
         android:text="REGISTRO DE CONSUMO"
         android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        android:cornerRadius="2dp" />
+        android:textSize="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

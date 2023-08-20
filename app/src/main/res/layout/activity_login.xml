@@ -41,13 +41,14 @@
         android:textSize="26dp" />
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/editTextUserLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
-        android:hint="Correo-usuario-celular"
+        android:hint="Correo-usuario"
         android:inputType="text"
+        android:textColor="#070707"
         android:textColorHint="@color/material_dynamic_neutral60" />
 
     <TextView
@@ -61,7 +62,7 @@
         android:textSize="26dp" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextTextPassLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

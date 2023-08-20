@@ -1,6 +1,6 @@
 package com.example.ecorecicla.modelos;
 
-public class user {
+public class User {
     String name,userName,email,password;
 
     public String getName() {
@@ -35,7 +35,7 @@ public class user {
         this.password = password;
     }
 
-    public user(String name, String userName, String email, String password) {
+    public User(String name, String userName, String email, String password) {
         this.name = name;
         this.userName = userName;
         this.email = email;
