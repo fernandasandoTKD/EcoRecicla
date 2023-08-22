@@ -17,8 +17,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="30dp"
         app:srcCompat="@drawable/reciclaje" />
 
@@ -57,12 +57,42 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_gravity="bottom"
-        android:gravity="bottom"
-        android:orientation="horizontal"></LinearLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <TableLayout
+        android:id="@+id/TableRecommendation"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewType"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="#8BC34A"
+                android:text="Tipo de consejo"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/textViewDes"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#8BC34A"
+                android:text="Descripción"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
+
+        </TableRow>
+
+    </TableLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
